@@ -31,8 +31,22 @@ function isUpperCase(s){
     s1 = s.charAt(0);
     return s1 == s1.toUpperCase();
 }
+
+function position(s){
+    for(i = 0 ; i < s.length ; i++){
+        c = s.charAt(i);
+        if (c == c.toUpperCase()){
+            return c + ' ' + i;
+        }
+    }
+    return -1;
+}
+
 //print(3);
 //star(5);
 //console.log(starReturn(5));
-console.log(isUpperCase("Abcd"));
-console.log(isUpperCase("abcd"));
+//console.log(isUpperCase("Abcd"));
+//console.log(isUpperCase("abcd"));
+console.log(position("abcd"));
+console.log(position("AbcD"));
+console.log(position("abCD"));
